@@ -1,34 +1,34 @@
-import { TrendingUp, Microscope, Beaker, Target } from "lucide-react";
+import { BookOpen, Network, Microscope, Calendar } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const stats = [
   {
-    label: "Research Impact",
-    value: "High",
-    change: "+12%",
-    icon: TrendingUp,
-    color: "text-primary"
+    label: "Total Publications",
+    value: "608",
+    description: "NASA Space Biology studies",
+    icon: BookOpen,
+    color: "text-nasa-orange"
   },
   {
-    label: "Active Topics",
-    value: "54",
-    change: "+8",
-    icon: Beaker,
-    color: "text-accent"
+    label: "Research Areas",
+    value: "11",
+    description: "Major topic categories",
+    icon: Network,
+    color: "text-space-blue"
   },
   {
-    label: "Organisms",
-    value: "217",
-    change: "+23",
+    label: "Model Organisms",
+    value: "7+",
+    description: "From cells to humans",
     icon: Microscope,
-    color: "text-space-purple"
+    color: "text-cosmic-purple"
   },
   {
-    label: "Key Insights",
-    value: "1.2K",
-    change: "+156",
-    icon: Target,
-    color: "text-cosmic-pink"
+    label: "Time Span",
+    value: "2015-2024",
+    description: "Years of research",
+    icon: Calendar,
+    color: "text-nasa-orange"
   }
 ];
 
@@ -49,8 +49,8 @@ const StatsOverview = () => {
               <p className="text-3xl font-bold text-foreground">
                 {stat.value}
               </p>
-              <p className="text-sm text-green-600 dark:text-green-400 font-medium">
-                {stat.change} this month
+              <p className="text-sm text-muted-foreground">
+                {stat.description}
               </p>
             </div>
             <div className={`p-3 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 ${stat.color}`}>
